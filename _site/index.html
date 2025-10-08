@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="4DGC: Rate-Aware 4D Gaussian Compression for Efficient Streamable Free-Viewpoint Video">
+    <meta name="author" content="Qiang Hu,
+                                Zihan Zheng,
+                                Houqiang Zhong,
+                                Sihua Fu,
+                                Li Song,
+                                Xiaoyun Zhang,
+                                Guangtao Zhai,
+                                Yanfeng Wang">
+
+    <title>4DGC: Rate-Aware 4D Gaussian Compression for Efficient Streamable Free-Viewpoint Vide</title>
+    <!-- Bootstrap core CSS -->
+    <!--link href="bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+    <!--    <link rel="icon" href="img/favicon.gif" type="image/gif">-->
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container"></div>
+        <h2>4DGC: Rate-Aware 4D Gaussian Compression for Efficient Streamable Free-Viewpoint Vide</h2>
+        <h3>CVPR 2025</h3>
+        <p class="abstract"></p>
+        <hr>
+        <p class="authors">
+            <a href="https://qianghu-huber.github.io/qianghuhomepage/"> Qiang Hu</a>,
+            <a> Zihan Zheng</a>,
+            <a> Houqiang Zhong</a>,
+            <a> Sihua Fu </a>,
+            <a> Li Song</a>
+            <a> Xiaoyun Zhang &dagger;</a>,
+            <a> Guangtao Zhai</a>,
+            <a> Yanfeng Wang &dagger;</a>
+        </p>
+        <div class="nerf_equal_v2">(&dagger; corresponding authors)</div>
+        </br>
+        <div class="btn-group" role="group" aria-label="Top menu">
+            <a class="btn btn-primary" href="https://arxiv.org/pdf/2503.18421v1">Paper</a>
+            <a class="btn btn-primary" href="https://github.com/qianghu-huber/4DGC">Code</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="vcontainer">
+                <iframe class="bilivideo"
+                    src=//player.bilibili.com/player.html?isOutside=true&aid=114466096218325&bvid=BV1N7VbzrEt1&cid=29837037531&p=1"
+                    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            </div>
+
+            <hr>
+            <p>
+                3D Gaussian Splatting (3DGS) has substantial potential for enabling photorealistic Free-Viewpoint Video
+                (FVV) experiences. However, the vast number of Gaussians and their associated attributes poses
+                significant challenges for storage and transmission. Existing methods typically handle dynamic 3DGS
+                representation and compression separately, neglecting motion information and the rate-distortion (RD)
+                trade-off during training, leading to performance degradation and increased model redundancy. To address
+                this gap, we propose 4DGC, a novel rate-aware 4D Gaussian compression framework that significantly
+                reduces storage size while maintaining superior RD performance for FVV. Specifically, 4DGC introduces a
+                motion-aware dynamic Gaussian representation that utilizes a compact motion grid combined with sparse
+                compensated Gaussians to exploit inter-frame similarities. This representation effectively handles large
+                motions, preserving quality and reducing temporal redundancy. Furthermore, we present an end-to-end
+                compression scheme that employs differentiable quantization and a tiny implicit entropy model to
+                compress the motion grid and compensated Gaussians efficiently. The entire framework is jointly
+                optimized using a rate-distortion trade-off. Extensive experiments demonstrate that 4DGC supports
+                variable bitrates and consistently outperforms existing methods in RD performance across multiple
+                datasets.
+            <div class="section">
+                <h2>System Overview</h2>
+                <hr>
+                <div class="row align-items-center">
+                    <div class="col justify-content-center text-center">
+                        <img src="img/teaser.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+                    </div>
+                    <hr>
+                    <p>
+                        Left: 4DGC results, showcasing flexible quality levels across various bitrates. Middle:
+                        Comparison of visual quality and bitrate
+                        with state-of-the-art methods. Right: The RD performance of our approach surpasses that of prior
+                        work (e.g. 3DGStream, ReRF, TeTriRF). </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Comparison</h2>
+                <hr>
+                <div class="row align-items-center">
+                    <div class="col justify-content-center text-center">
+                        <img src="img/result1.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+                    </div>
+                    <hr>
+                    <p>
+                        We present a qualitative comparison with ReRF, TeTriRF, and 3DGStream on the coffee martini
+                        sequence from the N3DV dataset and the trimming sequence from the MeetRoom dataset, as shown in
+                        the figure. Our approach achieves comparable reconstruction quality to 3DGStream at a
+                        substantially lower bitrate, achieving a compression rate exceeding <strong>16×</strong>.
+                        Compared to ReRF and
+                        TeTriRF, our 4DGC more effectively preserves finer details—such as the head, window, bottles,
+                        and books in coffee martini, and the face, hand, plant, and scissor in trimming—which are lost
+                        in the reconstructions of these two methods. This demonstrates that our 4DGC accurately captures
+                        dynamic scene elements and maintains high-quality detail in intricate objects while achieving a
+                        highly compact model size. </p>
+                </div>
+            </div>
+
+
+
+            <div class="section">
+                <h2>Bibtex</h2>
+                <hr>
+                <div class="row align-items-center"></div>
+                <div class="col">
+                    <div class="bibtexsection">
+                        @misc{hu20254dgcrateaware4dgaussian,
+                        title={4DGC: Rate-Aware 4D Gaussian Compression for Efficient Streamable Free-Viewpoint Video},
+                        author={Qiang Hu and Zihan Zheng and Houqiang Zhong and Sihua Fu and Li Song and XiaoyunZhang
+                        and Guangtao Zhai and Yanfeng Wang},
+                        year={2025},
+                        eprint={2503.18421},
+                        archivePrefix={arXiv},
+                        primaryClass={cs.CV},
+                        url={https://arxiv.org/abs/2503.18421},
+                        }
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

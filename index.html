@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AlignGS: Aligning Geometry and Semantics for Robust Indoor Reconstruction from Sparse Views">
+  <meta name="author" content="Yijie Gao, Houqiang Zhong*, Tianchi Zhu, Qiang Hu, Zhengxue Cheng, Li Song">
+
+  <title>AlignGS: Aligning Geometry and Semantics for Robust Indoor Reconstruction from Sparse Views</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+  <!-- Custom styles -->
+  <link href="offcanvas.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+      <h2>AlignGS: Aligning Geometry and Semantics for Robust Indoor Reconstruction from Sparse Views</h2>
+      <h3>VCIP 2025</h3>
+
+      <p class="authors mt-4">
+        <a href="https://gaoyijie-sjtu.github.io/">Yijie Gao</a><sup>*</sup>,
+        <a href="https://waveviewer.github.io/">Houqiang Zhong</a><sup>*</sup>,
+        <a>Tianchi Zhu</a>,
+        <a>Zhengxue Cheng</a>,
+        <a>Qiang Hu</a><sup>&dagger;</sup>,
+        <a>Li Song</a><sup>&dagger;</sup>
+      </p>
+
+      <div class="nerf_equal_v2">
+        <sup>*</sup> co-first authors &nbsp;&nbsp;
+        <sup>&dagger;</sup> corresponding authors
+      </div>
+
+      <br>
+      <div class="btn-group" role="group" aria-label="Top menu">
+        <a class="btn btn-primary disabled" href="#">Paper (Coming Soon)</a>
+        <a class="btn btn-primary" href="https://github.com/gaoyijie-sjtu/AlignGS">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <div class="container">
+
+    <!-- Abstract -->
+    <div class="section">
+      <h2>Abstract</h2>
+      <hr>
+      <p>
+        The demand for semantically rich 3D models of indoor scenes is rapidly growing, driven by 
+        applications in augmented reality, virtual reality, and robotics. However, creating them 
+        from sparse views remains a challenge due to geometric ambiguity. Existing methods often 
+        treat semantics as a passive feature painted on an already-formed, and potentially flawed, geometry. 
+        We posit that for robust sparse-view reconstruction, semantic understanding instead be an active, guiding force. 
+        This paper introduces AlignGS, a novel framework that actualizes this vision by pioneering a 
+        synergistic, end-to-end optimization of geometry and semantics. Our method distills rich priors from 
+        2D foundation models and uses them to directly regularize the 3D representation through 
+        a set of novel semantic-to-geometry guidance mechanisms, including depth consistency and 
+        multi-faceted normal regularization. Extensive evaluations on standard benchmarks demonstrate 
+        that our approach achieves state-of-the-art results in novel view synthesis and produces 
+        reconstructions with superior geometric accuracy. The results validate that leveraging 
+        semantic priors as a geometric regularizer leads to more coherent and complete 3D models from 
+        limited input views.
+      </p>
+    </div>
+
+    <!-- Method Overview -->
+    <div class="section">
+      <h2>Method Overview</h2>
+      <hr>
+      <div class="row align-items-center">
+        <div class="col justify-content-center text-center">
+          <img src="img/teaser.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+        </div>
+      </div>
+      <p>
+        We present the overview of the AlignGS pipeline, starting with initialization and 
+        the subsequent geometry and semantics joint optimization. This framework enables 
+        the end-to-end joint optimization of all geometric and semantic attributes of the 
+        Gaussian primitives, ensuring a synergistic refinement of both the scene's geometric 
+        structure and its semantic understanding.
+      </p>
+    </div>
+
+    <!-- Quantitative Comparison -->
+    <div class="section">
+      <h2>Quantitative Comparison</h2>
+      <hr>
+      <div class="row align-items-center">
+        <div class="col justify-content-center text-center">
+          <img src="img/quantitative_nvs.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col justify-content-center text-center mt-4">
+          <img src="img/quantitative_mesh.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+        </div>
+      </div>
+      <p>
+          We present our quantitave comparison across ScanNet and NRGBD scenes. As shown in the table above, 
+          AlignGS demonstrates state-of-the-art performance in novel view synthesis. As shown in the table below, 
+          AlignGS produces substantially more accurate and complete meshes, consistently achieving the highest F-score.
+      </p>
+    </div>
+
+    <!-- Qualitative Comparison -->
+    <div class="section">
+      <h2>Qualitative Comparison</h2>
+      <hr>
+      <div class="row align-items-center">
+        <div class="col justify-content-center text-center">
+          <img src="img/nvs_compare.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+        </div>
+      </div>
+      <p>
+        We present a qualitative nvs comparison across ScanNet and NRGBD scenes, showing 
+        our rendered RGB and depth from novel viewpoints. Our method produces significantly 
+        fewer artifacts and exhibits more coherent geometric structures compared to others.
+      </p>
+      <div class="row align-items-center">
+        <div class="col justify-content-center text-center mt-4">
+          <img src="img/mesh_compare.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+        </div>
+      </div>
+      <p>
+        We present a qualitative mesh comparison across ScanNet and NRGBD scenes, showing 
+        our extracted mesh normal alongside key baselines and ground truth. Our method 
+        recovers structurally more accurate and higher-fidelity surfaces with improved 
+        smoothness on objects and sharper distinction at semantic boundaries.
+      </p>
+      <div class="row align-items-center">
+        <div class="col justify-content-center text-center mt-4">
+          <img src="img/edit_compare.png" style="width:100%; margin-right:-10px; margin-top:-10px;">
+        </div>
+      </div>
+      <p>
+        We present a qualitative downstream editing performance: the left two columns compare our 
+        segmentation results from a novel viewpoint with Feature 3DGS; the right two 
+        columns demonstrate language-guided editing, including object extraction, 
+        deletion, and color highlighting (e.g., for pillows and cushions).
+      </p>
+    </div>
+
+    <!-- BibTeX -->
+    <div class="section">
+      <h2>BibTeX</h2>
+      <hr>
+      <div class="bibtexsection text-center">
+        (Citation to be added)
+      </div>
+    </div>
+
+    <hr>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"></script>
+</body>
+</html>
+

@@ -1,0 +1,166 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden;
+  /*Prevent scroll on narrow devices */
+  padding-top: 30px;
+  text-align: justify;
+}
+
+footer {
+  padding: 10px 0;
+}
+
+.authors {
+  font-size: 20px;
+}
+
+/*.container {
+  max-width: 768px;
+}*/
+.container {
+  max-width: 1000px;
+}
+
+p {
+  font-size: 16px;
+  /*padding-bottom: 20px;*/
+}
+
+li {
+  font-size: 16px;
+}
+
+h2 {
+  text-align: center;
+  align: center;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.btn {
+  font-size: 18px;
+}
+
+.btn-disabled {
+  /*background-color: #f4f4f4;*/
+}
+
+.jumbotron h2 {
+  font-size: 36px;
+}
+
+.section {
+  padding-top: 30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vcontainer {
+  display: flex;
+  flex-direction: column;
+  /* Stack videos vertically */
+  align-items: center;
+  /* Center videos horizontally */
+  gap: 20px;
+  /* Add space between videos */
+}
+
+.bilivideo {
+  width: 100%;
+  /* Allow videos to take up the full width of the container */
+  max-width: 800px;
+  /* Set a max width to prevent videos from becoming too large */
+  height: 450px;
+  /* Maintain aspect ratio */
+}
+
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  /* Stack videos vertically */
+  align-items: center;
+  /* Center videos horizontally */
+  gap: 20px;
+  /* Add space between videos */
+  margin-top: 20px;
+  /* Add space at the top */
+}
+
+.video {
+  width: 100%;
+  /* Allow videos to take up the full width of the container */
+  max-width: 640px;
+  /* Set a max width to prevent videos from becoming too large */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.video-iframe {
+  width: 100%;
+  /* Make iframe take up the full width */
+  max-width: 640px;
+  /* Set max width for the iframe */
+  height: 360px;
+  /* Set fixed height for YouTube video */
+  aspect-ratio: 16 / 9;
+  /* Maintain aspect ratio for YouTube iframe */
+}
+
+.video-element {
+  width: 100%;
+  /* Ensure video element takes up full container width */
+  height: auto;
+  /* Maintain aspect ratio for videos */
+  max-width: 640px;
+  /* Prevent videos from becoming too large */
+}
+
+
+.gif {
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.caption {
+  width: 75%;
+  font-size: 14px
+}
+
+.bibtexsection {
+  font-family: "Courier", monospace;
+  font-size: 16px;
+  /* white-space: pre; */
+  white-space: pre-line;
+  max-width: 100%;
+  word-wrap: break-word;
+  background-color: #f4f4f4;
+  text-align: left;
+  overflow: auto;
+}
+
+.canvas-row canvas {
+  max-width: 100%;
+}
+
+.padding-0 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.vspace-top {
+  margin-top: 30px;
+}
