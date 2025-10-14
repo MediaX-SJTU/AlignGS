@@ -48,5 +48,14 @@ structure and its semantic understanding.
 If you find this project useful in your research, please consider cite:
 
 ```
+@misc{Gao_2025_VCIP,
+      title={AlignGS: Aligning Geometry and Semantics for Robust Indoor Reconstruction from Sparse Views}, 
+      author={Yijie Gao and Houqiang Zhong and Tianchi Zhu and Zhengxue Cheng and Qiang Hu and Li Song},
+      year={2025},
+      eprint={2510.07839},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={http://arxiv.org/abs/2510.07839}, 
+}
 
 ```
