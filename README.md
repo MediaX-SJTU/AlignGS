@@ -46,7 +46,24 @@ structure and its semantic understanding.
 
 ## Updates
 
-- [2025.11.24]: Code version0  release
+- [2025.11.24]: Code version0 release
+
+## Environment Setup
+
+The repository contains submodules.
+```shell
+git clone https://github.com/MediaX-SJTU/AlignGS.git
+cd AlignGS
+
+conda create -n AlignGS python=3.8
+conda activate AlignGS
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 #replace your cuda version
+pip install -r requirements.txt
+pip install submodules/diff-plane-rasterization
+pip install submodules/diff-gaussian-rasterization-feature
+pip install submodules/simple-knn
+```
 
 ## Citation
 If you find this project useful in your research, please consider cite:
