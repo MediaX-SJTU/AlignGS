@@ -63,6 +63,40 @@ pip install submodules/diff-plane-rasterization
 pip install submodules/diff-gaussian-rasterization-feature
 pip install submodules/simple-knn
 ```
+## Data Preparation
+
+### Data structure
+
+We expect the following dataset structure in the source path location:
+```shell
+<location>
+├── scene_1/
+│   ├── images/                     # indoor few-shot rgb images
+│   │   ├── <image 0>.png
+│   │   ├── <image 1>.png
+│   │   └── ...
+│   ├── sparse/                     # camera params and sparse point cloud generated from pretrained vggt, used for reconstruction
+│   │   ├── cameras.bin
+│   │   ├── images.bin
+│   │   └── points3D.bin
+│   ├── pred_depths/                # depth maps generated from pretrained dinov2 + dpt 
+│   │   ├── <image 0>.npy
+│   │   ├── <image 1>.npy
+│   │   └── ...
+│   ├── segmentation_logits/        # segmentation logits generated from pretrained dinov2 + mask2former
+│   │   ├── <image 0>.pt
+│   │   ├── <image 1>.pt
+│   │   └── ...
+│   ├── pose/                       # raw camera extrinsics, only used for mesh cleaning
+│   │   ├── <image 0>.txt
+│   │   ├── <image 1>.txt
+│   │   └── ...
+│   ├── intrinsic_depth.txt         # raw camera intrinsics, only used for mesh cleaning
+│   └── <GT mesh>.ply               # ground truth mesh
+├── scene_2/
+└── ... 
+```
+
 
 ## Citation
 If you find this project useful in your research, please consider cite:
