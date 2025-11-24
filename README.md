@@ -44,6 +44,10 @@ the end-to-end joint optimization of all geometric and semantic attributes of th
 Gaussian primitives, ensuring a synergistic refinement of both the scene's geometric 
 structure and its semantic understanding.
 
+## News
+
+- [ ✔️ ] 20251124 Code version0  release
+
 ## Citation
 If you find this project useful in your research, please consider cite:
 
