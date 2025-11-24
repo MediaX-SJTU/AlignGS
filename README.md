@@ -50,7 +50,6 @@ structure and its semantic understanding.
 
 ## Environment Setup
 
-The repository contains submodules.
 ```shell
 git clone https://github.com/MediaX-SJTU/AlignGS.git
 cd AlignGS
