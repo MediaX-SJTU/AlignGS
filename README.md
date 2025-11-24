@@ -46,7 +46,7 @@ structure and its semantic understanding.
 
 ## News
 
-- [ ✔️ ] 20251124 Code version0  release
+- 2025.11.24 Code version0  release
 
 ## Citation
 If you find this project useful in your research, please consider cite:
