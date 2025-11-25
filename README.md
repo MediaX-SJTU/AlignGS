@@ -126,7 +126,7 @@ python render.py -m output_path --skip_train --edit_config config_path
 ```
 #### Notice:
 
-The default value of `edit_config` is set to `no editing`. To enable a specific editing operation, this parameter should be set to the path of configuration `.yaml` file under `configs/`.
+The default value of `edit_config` is set to `no editing`. To enable a specific editing operation, this parameter should be set to the path of your config `.yaml` file under `configs/`.
 
 ### Mesh Extraction
 
