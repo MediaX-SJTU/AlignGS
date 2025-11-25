@@ -47,6 +47,7 @@ structure and its semantic understanding.
 ## Updates
 
 - [2025.11.24]: Code version0 release
+- [2025.11.26]: Dataset sample and training result upload
 
 ## Environment Setup
 
