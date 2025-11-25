@@ -137,6 +137,10 @@ python render.py -m output_path --skip_test
 
 It is suggested to customize TSDF related parameters like `max_depth`, `voxel_size`, `num_cluster` according to your scene.
 
+## Acknowledgement
+
+This repository is built upon [3DGS](https://github.com/graphdeco-inria/gaussian-splatting), [PGSR](https://github.com/zju3dv/PGSR) and [Feature 3DGS](https://github.com/ShijieZhou-UCLA/feature-3dgs?tab=readme-ov-file). Our data preparation process is based on [NeuRIS](https://github.com/jiepengwang/NeuRIS), [VGGT](https://github.com/facebookresearch/vggt) and [DINOv2](https://github.com/facebookresearch/dinov2). Many thanks to these great open source repositories and many other inspiring works in the community.
+
 ## Citation
 If you find this project useful in your research, please consider cite:
 
