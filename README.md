@@ -113,7 +113,7 @@ Please refer to [DINOv2](https://github.com/facebookresearch/dinov2) for obtaini
 
 ### Training
 ```shell
-python train.py -s data_path -m output_path --semantics segmentation_logits --depths pred_depths --semantic_dim 150 --eval
+python train.py -s data_path -m output_path --semantics segmentation_logits --depths pred_depths --semantic_dim 150 --iterations 7000 --eval
 ```
 
 #### Notice:
