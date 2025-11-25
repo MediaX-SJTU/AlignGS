@@ -128,6 +128,15 @@ python render.py -m output_path --skip_train --edit_config config_path
 
 The default value of `edit_config` is set to `no editing`. To enable a specific editing operation, this parameter should be set to the path of configuration `.yaml` file under `configs/`.
 
+### Mesh Extraction
+
+```shell
+python render.py -m output_path --skip_test
+```
+#### Notice:
+
+It is suggested to customize TSDF related parameters like `max_depth`, `voxel_size`, `num_cluster` according to your scene.
+
 ## Citation
 If you find this project useful in your research, please consider cite:
 
