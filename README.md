@@ -97,6 +97,17 @@ We expect the following dataset structure in the source path location:
 └── ... 
 ```
 
+### Data Preparation
+
+The raw indoor scene datasets we used can be downloaded from [ScanNet](https://github.com/ScanNet/ScanNet) and [NRGBD](). Following the RGB data processing steps in [NeuRIS](https://github.com/jiepengwang/NeuRIS), we downsample the raw RGB images via resizing and uniform interval sampling.
+
+### initial point cloud & camera parameters
+
+Please refer to [VGGT](https://github.com/facebookresearch/vggt) for obtaining sparse 3D point cloud and camera params, the results will be saved under `scene_name/sparse ` in the COLMAP format.
+
+### depths & segmentation 
+
+
 
 ## Citation
 If you find this project useful in your research, please consider cite:
