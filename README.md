@@ -115,10 +115,18 @@ Please refer to [DINOv2](https://github.com/facebookresearch/dinov2) for obtaini
 ```shell
 python train.py -s data_path -m output_path --semantics segmentation_logits --depths pred_depths --semantic_dim 150 --iterations 7000 --eval
 ```
-
 #### Notice:
 
-The default value of `semantic_dim` is set to 150, as the semantic segmentation head used in our pipeline is pre-trained on [ADE20K](https://ade20k.csail.mit.edu/). If you adopt segmentation logits generated from another dataset or model, please adjust this parameter accordingly. In addition, you must synchronize the modification by adjusting `NUM_SEMANTIC_CHANNELS` in `submodules/diff-gaussian-rasterization-feature/cuda_rasterizer/config.h`.
+The default value of `semantic_dim` is set to `150`, as the semantic segmentation head used in our pipeline is pre-trained on [ADE20K](https://ade20k.csail.mit.edu/). If you adopt segmentation logits generated from another dataset or model, please adjust this parameter accordingly. In addition, you must synchronize the modification by adjusting `NUM_SEMANTIC_CHANNELS` in `submodules/diff-gaussian-rasterization-feature/cuda_rasterizer/config.h`.
+
+### Testing & Editing
+
+```shell
+python render.py -m output_path --skip_train --edit_config config_path
+```
+#### Notice:
+
+The default value of `edit_config` is set to `no editing`. To enable a specific editing operation, this parameter should be set to the path of configuration `.yaml` file under `configs/`.
 
 ## Citation
 If you find this project useful in your research, please consider cite:
