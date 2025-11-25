@@ -65,6 +65,8 @@ pip install submodules/simple-knn
 ```
 ## Data Preparation
 
+We provide our processed dataset as a [sample](https://drive.google.com/drive/folders/17cWsbaf92NF6l2pXwHhS8M8QKOy19QQY?usp=drive_link) here.
+
 ### Data structure
 
 We expect the following dataset structure in the source path location:
