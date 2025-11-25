@@ -97,7 +97,7 @@ We expect the following dataset structure in the source path location:
 └── ... 
 ```
 
-### Data Preparation
+### Data Preprocessing
 
 The raw indoor scene datasets we used can be downloaded from [ScanNet](https://github.com/ScanNet/ScanNet) and [NRGBD](). Following the RGB data processing steps in [NeuRIS](https://github.com/jiepengwang/NeuRIS), we downsample the raw RGB images via resizing and uniform interval sampling.
 
@@ -108,6 +108,18 @@ Please refer to [VGGT](https://github.com/facebookresearch/vggt) for obtaining s
 ### Depths maps & Segmentation logits
 
 Please refer to [DINOv2](https://github.com/facebookresearch/dinov2) for obtaining depth maps and segmentation logits. We save the depth maps in the `.npy` format under `scene_name/pred_depths`, and the segmentation logits in the `.pt` format under `scene_name/segmentation_logits`.
+
+## Run the codes
+
+### Training
+```shell
+python train.py -s data_path -m out_path --semantic_dim 150
+```
+
+#### Notice:
+
+The default value of semantic_dim is set to 150, as the semantic segmentation head used in our pipeline is pre-trained on ADE20K.
+If you adopt segmentation logits generated from another dataset or model, please adjust this parameter accordingly. In addition, you must synchronize the modification by adjusting `NUM_SEMANTIC_CHANNELS` in `submodules/diff-gaussian-rasterization-feature/cuda_rasterizer/config.h`.  
 
 ## Citation
 If you find this project useful in your research, please consider cite:
