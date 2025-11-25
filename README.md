@@ -118,7 +118,7 @@ python train.py -s data_path -m output_path --semantics segmentation_logits --de
 
 #### Notice:
 
-The default value of semantic_dim is set to 150, as the semantic segmentation head used in our pipeline is pre-trained on [ADE20K](https://ade20k.csail.mit.edu/). If you adopt segmentation logits generated from another dataset or model, please adjust this parameter accordingly. In addition, you must synchronize the modification by adjusting `NUM_SEMANTIC_CHANNELS` in `submodules/diff-gaussian-rasterization-feature/cuda_rasterizer/config.h`.
+The default value of `semantic_dim` is set to 150, as the semantic segmentation head used in our pipeline is pre-trained on [ADE20K](https://ade20k.csail.mit.edu/). If you adopt segmentation logits generated from another dataset or model, please adjust this parameter accordingly. In addition, you must synchronize the modification by adjusting `NUM_SEMANTIC_CHANNELS` in `submodules/diff-gaussian-rasterization-feature/cuda_rasterizer/config.h`.
 
 ## Citation
 If you find this project useful in your research, please consider cite:
