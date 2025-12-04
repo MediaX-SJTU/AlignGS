@@ -4,10 +4,11 @@
   <h1 align="center">AlignGS: Aligning Geometry and Semantics for Robust Indoor Reconstruction from Sparse Views</h1>
   
 
-[Yijie Gao](https://gaoyijie-sjtu.github.io/), [Houqiang Zhong](https://waveviewer.github.io/), Tianchi Zhu, Zhengxue Cheng, Qiang Hu✉, Li Song✉ <br />
+[Yijie Gao*](https://gaoyijie-sjtu.github.io/), [Houqiang Zhong*](https://waveviewer.github.io/), Tianchi Zhu, Zhengxue Cheng, Qiang Hu &dagger; , Li Song &dagger; <br />
 
+\* Eual contributions &dagger; Corresponding Author
 
-### [[`Project Page`](https://mediax-sjtu.github.io/AlignGS/)] [[`Paper`](http://arxiv.org/abs/2510.07839)]
+### [[`Project Page`](https://mediax-sjtu.github.io/AlignGS/)] [[`Paper`](http://arxiv.org/abs/2510.07839)] [VCIP 2025 Best Paper Award]
 </div>
 
 <!-- <p align="center">
